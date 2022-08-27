@@ -7,45 +7,45 @@ let city: CityTypeForTest;
 beforeEach(() => {
 
     city = {
-        title: "Kiev",
+        title: 'Kiev',
         houses: [
             {
-                id:1,
+                id: 1,
                 builtAt: 2012, repaired: false,
-                address: {number: 100, street: {title: "Some Street"}}
+                address: {number: 100, street: {title: 'Some Street'}}
             },
             {
-                id:2,
+                id: 2,
                 builtAt: 2008, repaired: false,
-                address: {number: 100, street: {title: "Happy Street"}}
+                address: {number: 100, street: {title: 'Happy Street'}}
             },
             {
-                id:3,
+                id: 3,
                 builtAt: 2020, repaired: false,
-                address: {number: 101, street: {title: "Happy Street"}}
+                address: {number: 101, street: {title: 'Happy Street'}}
             },
 
         ],
         governmentBuildings: [
             {
-                type: "Hospital",
+                type: 'Hospital',
                 budget: 200000,
                 staffCount: 200,
                 address:
                     {
                         street: {
-                            title: "Central Street"
+                            title: 'Central Street'
                         }
                     }
             },
             {
-                type: "Fire-Station",
+                type: 'Fire-Station',
                 budget: 500000,
                 staffCount: 1000,
                 address:
                     {
                         street: {
-                            title: "South Street"
+                            title: 'South Street'
                         }
                     }
             },
@@ -55,7 +55,7 @@ beforeEach(() => {
     }
 })
 
-test('list of street titles of gov buildings', ()=> {
+test('list of street titles of gov buildings', () => {
 
     let streetTitles = getGovBuildingsStreetTitles(city.governmentBuildings)
 
@@ -65,7 +65,7 @@ test('list of street titles of gov buildings', ()=> {
 
 })
 
-test('list of street titles of houses', ()=> {
+test('list of street titles of houses', () => {
 
     let streetTitles = getHousesStreetTitles(city)
 
@@ -76,13 +76,3 @@ test('list of street titles of houses', ()=> {
 
 })
 
-test('greet street habitants', ()=> {
-
-    let streetTitles = getHousesStreetTitles(city)
-
-    expect(streetTitles.length).toBe(3)
-    expect(streetTitles[0]).toBe('Some Street')
-    expect(streetTitles[1]).toBe('Happy Street')
-    expect(streetTitles[2]).toBe('Happy Street')
-
-})
