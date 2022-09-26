@@ -7,3 +7,4 @@ export function demolishBuildings(city:CityTypeForTest, street: string) {
 export const getBuildingsWithStaffCount = (city: CityTypeForTest, sCount: number) => {
  city.governmentBuildings = city.governmentBuildings.filter( gb => gb.staffCount > sCount)
 }
+
